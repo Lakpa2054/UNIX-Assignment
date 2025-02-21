@@ -107,7 +107,7 @@ Here is my brief description of what this code does
 here is my snippet of code used for data processing
 ```
 1	awk '{for(i=1;i<=NF;i++) if ($i == "ZMPBA") print "Found at column " i}' transjoin.txt
-2.	awk '{for(i=1;i<=NF;i++) if ($i == "ZMPJA") print "Found at column " i}' transjoin.txt
+2. awk '{for(i=1;i<=NF;i++) if ($i == "ZMPJA") print "Found at column " i}' transjoin.txt
 3.	awk '{for(i=1;i<=NF;i++) if ($i == "ZMPIL") print "Found at column " i}' transjoin.txt
 4.	cut -d $'\t' -f1,3,4,89-988,1178-1218,989-1022 transjoin.txt  > Teosinte.txt
 5.	(head -n 1 Teosinte.txt && tail -n +2 Teosinte.txt | sort -k3,3n) > Teosinte_sorted.txt
