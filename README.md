@@ -106,21 +106,23 @@ Here is my brief description of what this code does
 ```
 here is my snippet of code used for data processing
 ```
-1	awk '{for(i=1;i<=NF;i++) if ($i == "ZMPBA") print "Found at column " i}' transjoin.txt
-2. awk '{for(i=1;i<=NF;i++) if ($i == "ZMPJA") print "Found at column " i}' transjoin.txt
-3.	awk '{for(i=1;i<=NF;i++) if ($i == "ZMPIL") print "Found at column " i}' transjoin.txt
-4.	cut -d $'\t' -f1,3,4,89-988,1178-1218,989-1022 transjoin.txt  > Teosinte.txt
-5.	(head -n 1 Teosinte.txt && tail -n +2 Teosinte.txt | sort -k3,3n) > Teosinte_sorted.txt
-6.	grep -v "^#" Teosinte_sorted.txt | cut -f2 | sort | uniq -c
-7.	{ head -n 1 Teosinte_sorted.txt && awk -v chr="$i" '$2 == chr' Teosinte_sorted.txt; } > "Teosinte_chromo${i}.txt"
-8.	mv Teosinte_chromo*.txt Teosinte/
-9.	{ head -n 1 Teosinte_sorted.txt && awk '$2 == "multiple"' Teosinte_sorted.txt; } > Teosinte_chromoM.txt && \
+1.	awk '{for(i=1;i<=NF;i++) if ($i == "ZMPBA") print "Found at column " i}' transjoin.txt
+2.	awk '{for(i=1;i<=NF;i++) if ($i == "ZMPJA") print "Found at column " i}' transjoin.txt
+1.	awk '{for(i=1;i<=NF;i++) if ($i == "ZMPIL") print "Found at column " i}' transjoin.txt
+2.	cut -d $'\t' -f1,3,4,89-988,1178-1218,989-1022 transjoin.txt  > Teosinte.txt
+3.	(head -n 1 Teosinte.txt && tail -n +2 Teosinte.txt | sort -k3,3n) > Teosinte_sorted.txt
+4.	grep -v "^#" Teosinte_sorted.txt | cut -f2 | sort | uniq -c
+5.	{ head -n 1 Teosinte_sorted.txt && awk -v chr="$i" '$2 == chr' Teosinte_sorted.txt; } > "Teosinte_chromo${i}.txt"
+6.	mv Teosinte_chromo*.txt Teosinte/
+7.	{ head -n 1 Teosinte_sorted.txt && awk '$2 == "multiple"' Teosinte_sorted.txt; } > Teosinte_chromoM.txt && \
 { head -n 1 Teosinte_sorted.txt && awk '$2 == "unknown"' Teosinte_sorted.txt; } > Teosinte_chromoU.txt
-10.	mv Teosinte_chromoM.txt Teosinte_chromoU.txt Teosinte/
-11.	sed 's/?/-/g' Teosinte_sorted.txt > Teosinte-sorted.txt
-12.	for i in {1..10}; do
+8.	mv Teosinte_chromoM.txt Teosinte_chromoU.txt Teosinte/
+9.	sed 's/?/-/g' Teosinte_sorted.txt > Teosinte-sorted.txt
+10.	for i in {1..10}; do
 { head -n 1 TDsorted && awk -v chr="$i" '$2 == chr' TDsorted; } > "Teosinte_chromo${i}.txt"
 Done
+
+
 
 Here is my brief description of what this code does
 
