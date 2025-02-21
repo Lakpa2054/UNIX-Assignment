@@ -123,6 +123,7 @@ here is my snippet of code used for data processing
 Done
 
 Here is my brief description of what this code does
+
 1.	Search for the string “ZMPBA” in each column of transjoin.txt and print the no of column. 
 2.	Same as 1 search for “ZMPJA”
 3.	Same as 2, search for “ZMPIL”
