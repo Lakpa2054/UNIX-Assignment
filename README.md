@@ -98,7 +98,7 @@ Here is my brief description of what this code does
 21.	Changing directory 
 22.	Same as 13 but sort in decreasing order from MDsorted.txt file. 
 23.	For each chromosome ($i from 1 to 10), the script filters the sorted data (MDsorted.txt) to include any rows where the second column matches the chromosomes number and writes the result into new file named Maize_Decreasing_sorted{i}.txt. echo command prints the number of lines in each new file using the wc -l command, which count the number of lines in the file 
-![image](https://github.com/user-attachments/assets/fe73eeee-a7c1-4178-9e67-50c93552db43)
+
 
 
 ###Teosinte Data
